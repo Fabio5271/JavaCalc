@@ -7,6 +7,7 @@ public class Main {
         boolean run = true;
         boolean autoRes = false;
         Calc calc1 = new Calc(0);
+        System.out.println("** Aviso: Insira os números decimais de acordo com o formato do seu sistema (0,1 ou 0.1)");
 
         System.out.println("Mostrar resultado automaticamente?\n(S)im | (N)ão : ");
         ctl = mainCtl.next();
