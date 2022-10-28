@@ -8,33 +8,33 @@ public class Calc {
         this.res = res;
     }
 
-    public void Somar() {
-        System.out.println("Valor a ser somado: ");
+    public void Add() {
+        System.out.println("Value to be added: ");
         res += input.nextFloat();
     }
 
-    public void Subtrair() {
-        System.out.println("Valor a ser subtraido: ");
+    public void Subtract() {
+        System.out.println("Value to be subtracted: ");
         res -= input.nextFloat();
     }
-    public void Multiplicar() {
-        System.out.println("Multiplicar por: ");
+    public void Multiply() {
+        System.out.println("Multiply by: ");
         res *= input.nextFloat();
     }
-    public void Dividir() {
-        System.out.println("Divisor: ");
+    public void Divide() {
+        System.out.println("Divide by: ");
         float div = input.nextFloat();
         if (div != 0) {
             res /= div;
         }
         else {
-            System.out.println("Erro: Divisão por zero");
+            System.out.println("Error: Division by zero");
         }
     }
-    public void Zerar() {
+    public void Zero() {
         res = 0;
     }
-    public void Exibir() {
-        System.out.println("Resultado: " + res);
+    public void ShowRes() {
+        System.out.println("Result: " + res);
     }
 }
