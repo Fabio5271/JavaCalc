@@ -7,41 +7,41 @@ public class Main {
         boolean run = true;
         boolean autoRes = false;
         Calc calc1 = new Calc(0);
-        System.out.println("** Aviso: Insira os números decimais de acordo com o formato do seu sistema (0,1 ou 0.1)");
+        System.out.println("** Warning: Insert decimal numbers according to your system format (0,1 | 0.1)");
 
-        System.out.println("Mostrar resultado automaticamente?\n(S)im | (N)ão : ");
+        System.out.println("Show result automatically?\n(Y)es | (N)o : ");
         ctl = mainCtl.next();
-        if (ctl.equals("S") || ctl.equals("s")){
+        if (ctl.equals("Y") || ctl.equals("y")){
             autoRes = true;
         }
 
         while (run == true){
-            System.out.println("\nOperação a ser realizada: \n(So)ma | (Su)btração | (M)ultiplicação | (D)ivisão | (Z)erar | (R)esultado | (F)echar : ");
+            System.out.println("\nAvailable Actions: \n(A)dd | (S)ubtract | (M)ultiply | (D)ivide | (Z)ero | Show (R)esult | E(x)it : ");
             ctl = mainCtl.next();
 
-            if (ctl.equals("So") || ctl.equals("so")){
-                calc1.Somar();
-            } else if (ctl.equals("Su") || ctl.equals("su")) {
-                calc1.Subtrair();
+            if (ctl.equals("A") || ctl.equals("a")){
+                calc1.Add();
+            } else if (ctl.equals("S") || ctl.equals("s")) {
+                calc1.Subtract();
             } else if (ctl.equals("M") || ctl.equals("m")) {
-                calc1.Multiplicar();
+                calc1.Multiply();
             } else if (ctl.equals("D") || ctl.equals("d")) {
-                calc1.Dividir();
+                calc1.Divide();
             } else if (ctl.equals("Z") || ctl.equals("z")) {
-                calc1.Zerar();
+                calc1.Zero();
             } else if (ctl.equals("R") || ctl.equals("r")) {
                 if (autoRes == false){
-                    calc1.Exibir();
+                    calc1.ShowRes();
                 }
-            } else if (ctl.equals("F") || ctl.equals("f")) {
+            } else if (ctl.equals("X") || ctl.equals("x")) {
                 autoRes = false;
                 run = false;
             } else {
-                System.out.println("Ação Inválida");
+                System.out.println("Invalid Action");
             }
 
             if (autoRes == true){
-                calc1.Exibir();
+                calc1.ShowRes();
             }
         }
     }
